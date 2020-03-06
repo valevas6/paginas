@@ -1,0 +1,19 @@
+One Page Wonder (Catamaran Bold)
+Will Rock Your Socks Off (Catamaran Bold)
+
+LEARN MORE (Lato Regular)
+
+For those about to rock... (Catamaran Bold)
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati. (Lato Regular)
+
+We salute you! (Catamaran Bold)
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati. (Lato Regular)
+
+Let there be rock! (Catamaran Bold)
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati. (Lato Regular)
+
+Copyright © Your Website 2018 (Lato Regular)
+
+btn (bgcolor): #ee0979
+
+footer (bgcolor): #000

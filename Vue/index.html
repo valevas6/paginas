@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>TODO - app</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"> 
+	<link href="./bootstrap/bootstrap.min" rel="stylesheet">
+	<link href="./materialIcons/materialIcons" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"/>
+
+</head>
+
+    <body>
+    	<div id="app" class="container col-md-6 mcontainer">
+
+    		<pie-chart :donut="true" :colors="['#b3ffb3', '#ffb3b3']" :legend="false" :data="[['Completed', this.taskDone], ['Incompleted', this.taskToDo]]" :refresh="20"  :library="{animation: {easing:'linear'}}"  suffix="%"></pie-chart>
+	    	
+    		<div v-if="showEdit">
+			    <h1>Edit task</h1>
+					<input type="text" id="editText" class="form-control" v-model="selectTask">
+					<hr>
+					<button class="btn btn-primary" v-on:click="updateTask()">Edit</button>
+					<button class="btn btn-danger"  v-on:click="showEdit=false" id="btnitem">Close</button>
+				<br><br>
+			</div>
+			
+
+			<h1>To do:</h1>
+			
+			<ul>
+				<li v-for="task in tasks"  v-show="!task.completed" class="form-control" style="line-height: 2;">
+					{{task.name}} 
+					<button v-on:click="removeTask(task.id)" type="button" class="btn btn-danger rounded rounded-circle iconSize"><i class="material-icons" style="font-size:16px">close</i></button>
+					<button v-on:click="completeTask(task.id)" type="button" class="btn btn-success rounded rounded-circle"><i class="material-icons" style="font-size:16px">check</i></button>
+					<button v-on:click="selectedTask(task.id)" type="button" class="btn btn-primary rounded rounded-circle"><i class="material-icons" style="font-size:16px">mode_edit</i></button>
+				</li>
+				<br/>
+			
+		    	<h6>Task</h6>
+			    <input id="add-task" type="text" v-on:keyup.enter="addTask" v-model="newTask" placeholder="What do you need to do" class="form-control"></br>
+			    <button id="save-btn" v-on:click="addTask"  class='btn btn-primary btnitem'>Add Task</button>
+
+			    <br><br>
+			    <hr>
+			    <h2>Completed tasks:</h2>
+			    <ul>
+					<li v-for="task in tasks" v-show="task.completed" class="form-control" style="line-height: 2;">
+						{{task.name}} 
+						<button v-on:click="removeTask(task.id)" type="button" class="btn btn-danger rounded rounded-circle"><i class="material-icons" style="font-size:16px">close</i></button>
+						<button v-on:click="task.completed=false; completedIncompleted()" type="button" class="btn btn-primary rounded rounded-circle">	<i class="material-icons" style="font-size:16px">sync</i></button>
+					</li>
+				</ul>
+				
+
+	    </div>
+
+	    <script src="./vue/vue.js"></script>
+	    <script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.js"></script>
+	    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	    <script src="https://unpkg.com/vue-chartkick@0.3.1/dist/vue-chartkick.js"></script>
+	   
+	    <script>
+	    	
+	    	var app=new Vue({
+	    		el:'#app',
+	    		data:{
+	    			newTask:'',
+	    			lastId:3,
+	    			showEdit:false,
+	    			selectTask:'Task to edit',
+	    			elemento:'',
+	    			taskDone:0,
+	    			taskToDo:0,
+	    			
+
+	    			tasks:[
+	    				{id:1, name:'Do Homework', completed:false},
+	    				{id:2, name:'Eat breakfast', completed:false}, 
+	    				{id:3, name:'Wash the dishes', completed:true},
+	    			],
+
+
+	    			//chartData:[['Completed', this.taskDone], ['Incompleted', this,taskToDo]]
+	    		},
+
+	    		created: function(){
+	    			setTimeout(() =>{
+	    				this.completedIncompleted();
+	    			}, 2000)
+	    			
+	    		},
+
+
+	    		methods:{
+	    			addTask(){
+	    				if(this.newTask.trim()){
+	    					this.lastId++;
+	    					this.tasks.push({id:this.lastId, name:this.newTask, completed:false});
+	    					this.newTask='';
+	    					this.completedIncompleted();
+	    				}
+	    				else{
+	    					alert('Empty space, you need to write a new task.');
+	    				}
+	    				
+	    				
+	    			},
+
+	    			completeTask(val){
+	    				console.log('complete task' +val + name);
+	    				var found= this.tasks.find(function(element){
+	    					return element.id === val;
+	    				});
+	    				found.completed=true;
+	    				this.completedIncompleted();
+	    			},
+
+	    			removeTask(val){
+	    				console.log('remove task'+val);
+	    				var items=this.tasks.filter(element=>{
+	    					return element.id!=val;
+	    				});
+	    				this.tasks=items;
+	    				this.completedIncompleted();
+	    			},
+
+	    			selectedTask(val){
+	    				var len=this.tasks.length;
+	    				for(var i=0; i<len; i++){
+	    					if(this.tasks[i].id===val){
+	    						this.selectTask=this.tasks[i].name;
+	    						this.elemento=this.tasks[i];
+	    						this.showEdit=true;
+	    						break;
+	    					}
+	    				};
+					},
+
+					updateTask(){
+						this.elemento.name=this.selectTask;
+						console.log(this.selectTask);
+						this.selectTask='';
+						this.showEdit=false;	
+					},
+
+					completedIncompleted(){	
+						var len=this.tasks.length;
+						var completed=0;
+	    				for(var i=0; i<len; i++){
+	    					if(this.tasks[i].completed){
+	    						completed++;
+	    					}
+	    				}
+	    				this.taskDone=completed;
+	    				this.taskDone=Math.round((this.taskDone*100)/len);
+	    				this.taskToDo=Math.round(100-this.taskDone);
+					},
+
+
+
+
+	    		}
+	    	});
+
+	    </script>
+    </body>

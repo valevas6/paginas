@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Costa Rica</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styleclima.css"/>
+</head>
+
+<body>
+
+	<div id="app" class="container col-md-6">
+		<h1 class="text-center">Weather Average: {{ avg }}ºC</h1>
+		<line-chart :data="chartData" ></line-chart>
+		<button id="save-btn" v-for="item in items" v-on:click="updateChartData(item[0].id)" class="btn btn-outline-dark margin">{{item[0].year}}</button>
+	</div>
+
+	<script src="./vue/vue.js"></script>
+	<script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://unpkg.com/vue-chartkick@0.3.1/dist/vue-chartkick.js"></script>
+
+	    <script>
+	    	var app= new Vue({
+	    		el: '#app',
+	    		data:{
+	    			chartData:[],
+	    			avg:0,
+	    			items:[
+	    			[
+		    			{'id':0, 'year':2010, 'avg':25.11},
+		    			{'jan':25.2784, 'feb':26.0736 , 'mar':26.7709, 'apr':26.8939, 'may':26.3427 , 'jun':25.1445, 'jul':24.7541, 'aug':24.6571, 'sep':24.3596, 'oct':24.7424, 'nov':23.4164, 'dec':22.8569},
+	    			],
+	    			[
+		    			{'id':1, 'year':2011, 'avg':24.93},
+		    			{'jan':24.7978, 'feb':25.2543 , 'mar':25.4913, 'apr':26.1639, 'may':26.1229 , 'jun':25.3594, 'jul':25.09, 'aug':24.995, 'sep':25.0584, 'oct':23.5554, 'nov':23.4599, 'dec':23.8426},
+	    			],
+	    			[
+		    			{'id':2, 'year':2012, 'avg':24.59},
+		    			{'jan':24.378, 'feb':24.0607 , 'mar':24.9974, 'apr':25.5391, 'may':25.5878 , 'jun':25.1567, 'jul':25.2228, 'aug':24.7737, 'sep':24.5324, 'oct':23.8083, 'nov':22.8913, 'dec':24.1055},
+	    			],
+	    			[
+		    			{'id':3, 'year':2013, 'avg':24.67},
+		    			{'jan':24.7066, 'feb': 24.5188, 'mar':24.9107, 'apr':25.7687, 'may':25.147 , 'jun':24.5506, 'jul':24.8446, 'aug':24.4984, 'sep':24.2705, 'oct':24.2799, 'nov':24.183, 'dec':24.319},
+	    			],
+	    			[
+		    			{'id':4, 'year':2014, 'avg':25.14},
+		    			{'jan':26.5057, 'feb':24.8617 , 'mar':25.5403, 'apr':25.9777, 'may':25.8763 , 'jun':25.0753, 'jul':25.5221, 'aug':25.2618, 'sep':24.3711, 'oct':24.6104, 'nov':24.03, 'dec':24.0025},
+	    			],
+	    			[
+		    			{'id':5, 'year':2015, 'avg':25.10},
+		    			{'jan':24.5549, 'feb':24.6674 , 'mar':24.7721, 'apr':26.0779, 'may':25.8694 , 'jun':25.4321, 'jul':24.8645, 'aug':25.583, 'sep':24.7568, 'oct':24.9505, 'nov':25.1152, 'dec':24.6083},
+	    			
+	 				]
+	    			
+	    		]
+	    			
+	    		},
+	    		created: function(){
+	    			setTimeout(()=>{
+	    				this.chartData=this.items[0][1];
+	    				this.avg=this.items[0][0].avg;
+	    			},2000);
+	    		},
+	    		methods:{
+	    			updateChartData(index){
+	    				this.chartData=this.items[index][1];
+	    				this.avg =this.items[index][0].avg;
+	    			}
+	    		}
+
+	    	});
+	    </script>
+</body>

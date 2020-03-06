@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>TODO - app</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"> 
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+
+	</head>
+	<body class="container" id="mcontainer">
+		<h1>Edit task</h1>
+		<form>
+			<input type="text" class="form-control" placeholder="Edit your task">
+			<hr>
+			<button class="btn btn-primary">Edit</button>
+			<button class="btn btn-danger" id="btnitem">Close</button>
+		</form>
+	</body>
+</html>
+
+updateTask(){
+	var found= this.tasks.find(element=>{
+	  			return element.id === this.selectId;
+	}); 
+	found.name=this.selectTask;
+	this.selectTask='';
+	this.showEdit=false;	
+	},
+	  }
+
+
+	  selectedTask(val){
+	  		
+	  		console.log(val+name);
+	  		var found= this.tasks.find(function(element){
+	  			return element.id === val;
+	});
+	  		this.showEdit=true;	
+	  		this.selectTask=found.name;
+	  		this.selectId=found.id;  
+},

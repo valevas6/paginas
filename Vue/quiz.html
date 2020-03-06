@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Web Developing Countries</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="stylequiz.css"/>
+</head>
+<body>
+	<div id="app" class="container col-md-10">
+		<br>
+		<h1 class="text-center">What do developers get paid</h1>
+		<br>
+		<geo-chart :data="chartData" :library="{animation: {easing:'linear'}}" prefix="£" :colors="['#b3ffb3']"></geo-chart>
+		<br>
+		<line-chart :data="chartData" :library="{animation: {easing:'linear'}}" prefix="£" :colors="['#b3ffb3']"></line-chart>
+		<br>
+		<center><button v-for="item in items" v-on:click="updateChartData(item[0].id)" class="btn btn-success " >{{item[0].status}}</button></center>
+		
+		<br><br>
+
+	</div>
+	
+	<script src="./vue/vue.js"></script>
+	<script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://unpkg.com/vue-chartkick@0.3.1/dist/vue-chartkick.js"></script>
+
+	<script>
+		var app= new Vue({
+	    		el: '#app',
+			data:{
+				message:'Hola',
+				chartData:[], 
+
+				items:[
+					[
+						{'id':0, 'status':'Web developer' },
+						{'Switzerland':75.78, 'United States':56.55, 'Germany':34.41, 'Norway':53.04,'Israel':45.19, 'Australia':50.42, 'Canada':41.91, 'Denmark':51.71, 'Sweden':39.83, 'New Zealand':31.26},
+					],
+					[
+						{'id':1, 'status':'Software developer'},
+						{'Switzerland':62.09, 'United States':55.33, 'Germany':86.962, 'Norway':52.59, 'Israel':46.69, 'Australia':50.41, 'Canada':38.87, 'Denmark':33.20, 'Sweden':76.56, 'New Zealand':36.14},
+					],
+					[
+						{'id':2, 'status':'Mobile developer'},
+						{'Switzerland':61.3425, 'United States':87.01, 'Germany':39.23, 'Israel':55.177, 'Australia':39.25, 'Canada':36.1, 'New Zealand':37.597},
+					],
+				],
+			},
+
+				created: function(){
+	    			setTimeout(()=>{
+	    				this.chartData=this.items[0][1];
+	    			},2000);
+	    		},
+
+	    		methods:{
+	    			updateChartData(index){
+	    				this.chartData=this.items[index][1];
+	    			}
+	    		}
+
+				
+			})
+	</script>
+</body>
