@@ -1,0 +1,45 @@
+body{
+	display: block;
+	margin: 8px;
+}
+
+#container{
+	width: 320px;
+	height: 420px;
+	background: #9BF4F2;
+	margin:auto;
+	position: relative;
+	
+}
+
+#power-bar{
+	width: 20px;
+	height: 0px;
+	background:#FCC658;
+	bottom: 0;
+	position: absolute;
+}
+
+#circulo {
+     width: 20px;
+     height: 20px;
+     top:400px;
+     left: 150px;
+     border-radius: 50%;
+     background: #EE886C;
+     position: relative;
+}
+
+#btn{
+	width:40px;
+	height: 30px;
+	position: absolute;
+	text-align: center;
+	margin-top:370;
+	font-family: Arial;
+	font-size: 20;
+	background: #C1DCA1;
+	left: 280px;
+	cursor: pointer;
+	color:#FFFFFF;
+}
