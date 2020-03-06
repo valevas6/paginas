@@ -1,0 +1,122 @@
+<html>
+<head>
+	<title>Chipotle Mexican Grill - Restaurant</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="CSS/animate.css"><!--https://daneden.github.io/animate.css/-->
+
+</head>
+<body>
+	<a id="main-top" name="main-top"></a>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a id="about-us" href="#">ABOUT US</a></li>
+				<li><a id="menu" href="#">MENU</a></li>
+				<li><a id="reviews" href="#">REVIEWS</a></li>
+				<li><a id="contact-us" href="#">CONTACT US</a></li>
+			</ul>
+		</nav>
+		<img src="imgs/header.jpg" alt"header">
+
+	</header>
+
+	<section>
+		<div class="row"> <!--se llama el row o el about us para que se modifique solo lo que esa en las divisiones en este 
+			caso el row esta dejando un margen-->
+		<div class="about-us wow pulse"data-wow-duration="2s">
+			<h2>About Us</h2>
+			<p>We love to talk about our made-from-scratch dishes, each one made from the heart and crafted with pride from Chef Luis Sanchez’s family recipes. We use only the freshest, finest ingredients in all our dishes from our scratch-made salsas, sauces and sides, to our hand-rolled enchiladas, traditional TexMex items and unique House Specialties.</p>
+		</div>
+
+		<div  class="about-gallery wow swing" data-wow-duration="2s">
+			<ul> <!--ul lista de etiquetas*-->
+				<li>
+					<img src="imgs/about.jpg" alt="about">
+				</li>
+				<li>
+					<img src="imgs/about.jpg" alt="about">
+				</li>
+				<li>
+					<img src="imgs/about.jpg" alt="about">
+				</li>
+				<li>
+					<img src="imgs/about.jpg" alt="about">
+				</li>
+			</ul>
+		</div>
+	    </div>
+	</section>
+	<section>
+		<img src="imgs/menu.jpg" alt="menu">
+		<div class="row">
+		<div class="menu-left wow fadeIn" data-wow-duration="2s">
+			<h3>ABUELO’S DIP SAMPLER</h3>
+			<p>Our Chile con Queso, Queso Diablo, and Avocado Cream.</p>
+
+			<h3>SEARED TUNA</h3>
+			<p>Sashimi grade Yellowfin tuna seared and served with fresh greens, mango relish, avocado, spicy mustard and honey lime dressing.</p>
+		
+			<h3>GUACAMOLE</h3>
+			<p>Perfectly seasoned guacamole made with fresh avocado.</p>
+		
+			<h3>NACHOS GRANDE</h3>
+			<p>Fresh chips topped with cheese, ground beef, chicken or refried beans, in any combination. Served with sour cream, guacamole, pico de gallo and jalapeño. Substitute steak or chicken fajita for an additional charge.</p>
+		</div>
+		<div class="menu-right wow fadeIn" data-wow-duration="2s"><!--Debe de haber una clase ya llamada para poder pomerle animacion-->
+			<h3>GREEN CHILE QUESADILLA</h3>
+			<p>Grilled flour tortillas stuffed with roasted red and green chiles, mushrooms, sautéed onions and cheese. Served with sour cream, fresh guacamole and ranch dip.</p>
+
+			<h3>MEXICAN SHRIMP COCKTAIL</h3>
+			<p>Plump shrimp served in our made-from-scratch cocktail sauce. Served over a layer of our avocado cream.</p>
+		
+			<h3>CHILE CON QUESO</h3>
+			<p>A Mexican-style cheese dip – creamy and delicious.</p>
+		
+			<h3>LAYERED DIP</h3>
+			<p>Chile con queso with layers of guacamole, refried beans, seasoned ground beef, sour cream and more.</p>
+		</div>
+		</div>
+	</section>
+
+	<section class="reviews">
+
+		<h2>REVIEWS FROM OUR CLIENTS</h2>
+		<h3>Great good, friendly family</h3>
+		<p>We came for dinner, ordering chiles rellenos, chorizo and beef empanadas, and a chimichanga. All three of us loved our meals. It was fresh, really flavorful, and filling. We also had margaritas, which were great.</p>
+		<p>noonmark11</p>
+		<p>Seattle, Washington</p>
+
+	</section>
+	<section class="contact-us">
+		<div class="row">
+			<h2>CONTACT US</h2>
+			<p>We value our guest’s input in helping us to provide the best experience possible. Please let us know how we can better serve you.</p>
+            <p>Emails received through this form are reviewed Monday-Friday between 9 a.m. – 5:00 p.m. CST.</br></p>
+            <p>Thank you for contacting us. We will reply to you soon, however, our responses may be slightly delayed some during the holidays. Thank you for your patience and happy holidays!
+            </p>
+		</div>
+		<div class="top-btn">TOP</div>
+	</section>
+	<footer class="footer">	
+		<p>2017&reg;</p>
+	</footer>
+
+	<script src="js/wow.js"></script><!--Llama a la libreria de las animaciones-->
+	<script src="js/jquery-3.2.1.min.js"></script><!--Tiene que tener este orden-->
+	<script src="js/animatescroll.min.js"></script>
+	<script>
+		$('document').ready(function(){
+		new WOW().init();
+		//
+		$('#about-us').click(function(){$('.about-us').animatescroll();});	
+		$('#menu').click(function(){$('.menu-right').animatescroll();});	
+		$('#reviews').click(function(){$('.reviews').animatescroll();});	
+		$('#contact-us').click(function(){$('.contact-us').animatescroll();});	
+		$('.top-btn').click(function(){$('#main-top').animatescroll();});//llama a que se cargue una parte de la imagen el #contact us es como esta llamado en el meni u lo que esta como'.reviews' es a la clase donde esta sera llamada
+		});
+	</script>
+
+</body>
+
+</html>

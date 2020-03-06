@@ -1,0 +1,138 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+/*el a y nav hover es para que el menu salga de manera ue se desee en el a se pone la transicion*/
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all .6s;
+}
+
+nav a:hover{
+    background: #fff;
+    color: #451500;
+}
+
+@font-face {
+    font-family: 'CicleGordita';
+    src: url('../fonts/cicle/cicle_gordita-webfont.woff2') 
+    format('woff2'),
+         url('../fonts/cicle/cicle_gordita-webfont.woff') 
+         format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CicleFina';
+    src: url('../fonts/cicle/cicle_fina-webfont.woff2') 
+    format('woff2'),
+         url('../fonts/cicle/cicle_fina-webfont.woff') 
+         format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav{
+	font-family: 'CicleGordita';
+	background: #451500;
+	color: #fff;
+}
+.top-btn{
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    font-family: 'CicleGordita';
+    border-bottom: 2px dotted #7bc55c;
+    color: #7bc55c;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav li{/**/
+    font-size: 20px;
+    display: inline-block;
+    margin: 20 20px;
+
+}
+
+
+img{
+    width: 100%;
+}/*Hace que la imagen se expanda y encoja por defecto dependiendo de como se utilice el navegador*/
+
+h2{
+    font-family: 'CicleGordita';
+    font-size: 30px;
+}
+
+h3{
+    font-family: 'CicleGordita';
+    font-size: 20px;
+}
+
+p{
+    font-family: 'CicleFina';
+    font-size: 20px;
+}/*se pone p o h2 o nav con la letra que se desea aplicar y el tamaño*/
+
+.row{/*margenes*/
+    width: 90%;/*espacio que se va a necesitar*/
+    margin: 30px auto;
+    display: inline-block;
+    padding: 10;
+    margin: 10;
+}
+
+.about-us{/*clases que se hacen para aplicarlo de a algo en especifico*/
+ width: 40%;
+ float: left;
+}
+
+.about-gallery{
+    width: 35%;
+    float: right;/*distribuir el espacio*/
+
+}
+
+.about-gallery li{
+    display: inline-block;
+}
+
+.reviews{
+    width: 100%;
+    float: left;
+    background: #451500;
+    color: #fff;
+    text-align: center;
+}
+
+footer{
+    width: 100%;/*centra*/
+    float: left;
+    text-align: center;
+}
+
+
+.menu-left{
+   width: 40%;
+   padding: 0 5%;
+   float: left; 
+}
+
+.contact-us{
+text-align: center;
+}
+
+.menu-right{
+    width: 40%;
+    padding: 0 5%;
+   float: right; 
+}
+
+
