@@ -1,0 +1,935 @@
+        @font-face {
+            font-family: "Cocon";
+            src: url('../assets/fonts/Cocon-Regular.otf');
+        }
+        
+        @font-face {
+            font-family: "Comfortaa";
+            src: url('../assets/fonts/Comfortaa-Regular.ttf');
+            color: white;
+        }
+        
+        body {
+            background: #F2F4F3;
+            overflow-x: hidden;
+        }
+        
+        .div-col {
+            padding-right: 0px;
+            padding-left: 0px;
+            text-align: center;
+        }
+        /*************************Header*******************************/
+        
+        .clase {
+            margin-top: 10%;
+        }
+        
+        .carousel-caption {
+            transform: translateY(-50%);
+            bottom: 0;
+            top: 50%;
+        }
+        
+        .fondo {
+            transition-property: all;
+            transition-duration: 0.6s;
+            background: #6D8EA0;
+            /* opacity: 0.9;*/
+        }
+        
+        .letras {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 1)!important;
+        }
+        
+        .letras::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #B5E400;
+            transition: width .3s;
+        }
+        
+        .letras:hover::after {
+            width: 100%;
+        }
+        
+        .page::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #B5E400;
+            transition: width .3s;
+        }
+        
+        .logo-header {
+            margin-bottom: 1%;
+        }
+        
+        .logo-header:hover {
+            cursor: pointer;
+        }
+        /*************************Fin de header*******************************/
+        /*****************Pagina de contactos*******************/
+        
+        .margenRow {
+            width: 100%;
+        }
+        
+        .white {
+            color: white;
+        }
+        
+        .background-header {
+            background-image: url(../img/background-header.png);
+            background-repeat: no-repeat;
+            padding-right: 0;
+            max-width: 100%;
+        }
+        
+        .margen-contactenos {
+            margin-top: 4%;
+            background-image: url(../img/background-contactUs.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-size: 48px;
+        }
+        
+        .fondo-formulario {
+            background-image: url(../img/background-form.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        h1 {
+            font-size: 35px;
+        }
+        
+        .cajaTexto1-contactenos {
+            border-color: #fff;
+            border-style: solid;
+            border-width: thin;
+            margin: 0% 4% 0% 5%;
+            height: 800px;
+        }
+        
+        .cajaTexto2-contactenos-formulario {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0% 5% 0% 5%;
+            height: 800px;
+        }
+        
+        .rayas-form:before,
+        .rayas-form:after {
+            width: 40%;
+            height: 40%;
+            content: '';
+            position: absolute;
+        }
+        
+        .rayas-form:before {
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            /* top: 5%;
+    left: 7%;*/
+        }
+        
+        .rayas-form:after {
+            border-right: 3px solid white;
+            border-bottom: 3px solid white;
+            bottom: 5%;
+            right: 6.5%;
+        }
+        
+        #tipografia-cocon {
+            font-family: "Cocon";
+        }
+        
+        #tipografia-conforta {
+            font-family: "Comfortaa";
+        }
+        
+        .tipografia-titulos-cajas {
+            font-size: 26px;
+        }
+        
+        .tipografia-titulos-formulario {
+            font-size: 20px;
+        }
+        
+        .tipografia-texto-cajas {
+            color: #fff;
+            font-size: 18px;
+        }
+        
+        .margenes-cajas {
+            margin: 10% 0% 4% 8%;
+        }
+        
+        .margenes-cajas-form {
+            margin: 0% 8% 0% 8%;
+        }
+        
+        .fondo-info {
+            background-image: url(../img/background-INFO.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .img-circle {
+            border-radius: 50%;
+            width: 50%;
+        }
+        
+        .tituloInfo-margen {
+            margin-top: 4%;
+            margin-bottom: 4%;
+        }
+        
+        .cards-estilo {
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        /***************Fin de pagina de contactos*******************/
+        /***************Pagina de index*******************/
+        
+        .maxCajaHome {
+            max-width: 100%;
+        }
+        
+        .background-index {
+            background-image: url(../img/index/middle-04.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-right: 0;
+            max-width: 100%;
+            padding: 20px;
+        }
+        
+        .caja-mensaje {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0% 5% 0% 5%;
+            text-align: center;
+            align-content: center;
+            padding: 30px;
+        }
+        
+        .img-pies {
+            width: 30%;
+            align-content: center;
+        }
+        
+        .margen-slider {
+            margin-top: 80px;
+        }
+        
+        .tipografia-titulos-slider {
+            color: #fff;
+            font-size: 350%;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+        
+        .sliderImages {
+            width: 100%;
+        }
+        
+        .lineaVerde {
+            height: 2px;
+            background-color: #52AA00;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+        .margenesTextoindex {
+            margin-top: 11%;
+            margin-bottom: 5%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        
+        .border-content-imagen1 {
+            border-left: 2px solid #52AA00;
+        }
+        
+        .border-content-imagen2 {
+            border-left: 2px solid #52AA00;
+        }
+        /***************Fin de pagina de index*******************/
+        /***************Pagina de info*******************/
+        
+        .header-info {
+            background-image: url(../img/Info/header-02-02.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 5%;
+            background-position: center;
+        }
+        
+        .caja-info {
+            background-color: #52AA00;
+            padding: 1%;
+            width: 400px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .images {
+            width: 100%;
+        }
+        
+        .container-text {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        p {
+            font-size: 18px;
+            color: black;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-family: "Comfortaa";
+        }
+        
+        .caja-texto-info {
+            background-color: rgba(36, 153, 21, 0.747);
+            padding: 5%;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .caja-texto-info-2 {
+            background-color: #282625;
+            padding: 5%;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tipografia-titulos-info {
+            color: #fff;
+            font-size: 400%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+        
+        .mision-desktop {
+            display: block;
+        }
+        
+        .mision-movil {
+            display: none;
+        }
+        /***************Fin de pagina de info*******************/
+        /***************Pagina de horarios*******************/
+        
+        .header-horarios {
+            background-image: url(../img/horarios/header-02.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 5%;
+            background-position: center;
+            margin-bottom: 100px;
+        }
+        
+        .caja-header {
+            background-color: #52AA00;
+            padding: 2%;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .caja-mapa {
+            background-color: #52AA00;
+            padding: 1.5%;
+            width: 200px;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 12px;
+        }
+        
+        .marg-prov {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .caja-mapa:hover {
+            background-color: rgb(69, 136, 7);
+            transition-duration: 0.5s;
+        }
+        
+        .C {
+            color: black;
+        }
+        
+        .background-titles {
+            background-color: #52AA00;
+            border-style: solid;
+            border-color: #ffffff;
+        }
+        /***************Fin de pagina de horarios*******************/
+        /*************************Letras*******************************/
+        
+        h2 {
+            font-size: 30px;
+        }
+        
+        h5 {
+            font-size: 20px;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        /*************************Fin de letras*******************************/
+        
+        .h1Slider {
+            font-size: 3rem;
+        }
+        
+        .h4Slider {
+            font-size: 2rem;
+        }
+        
+        .desplegable {
+            position: relative!important;
+            padding-bottom: 64px;
+            margin-top: -95px;
+        }
+        
+        .margenesTexto {
+            margin-top: 11%;
+            margin-bottom: 5%;
+        }
+        
+        .margenesCuadro {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        
+        .cuadroTextoImag {
+            width: 90%;
+            margin-bottom: 40px;
+        }
+        
+        .marginBottom {
+            margin-bottom: 10%;
+        }
+        
+        button {
+            margin-top: 5%;
+        }
+        /*****************Footer************************/
+        
+        .footer-distributed {
+            background-image: url(../img/background-footer.png);
+            width: 100%;
+            text-align: left;
+            padding: 55px 50px;
+        }
+        
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+        /* Footer Izquierda */
+        
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+        
+        .footer-distributed .footer-center i {
+            color: #ffffff;
+            font-size: 35px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+        
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 25px;
+            line-height: 38px;
+        }
+        
+        .tipo-tamanio {
+            font-size: 23px!important;
+        }
+        
+        .vl {
+            border-left: 5px solid #52AA00;
+            height: 130px;
+            margin-top: 2%;
+            position: absolute;
+            display: block;
+        }
+        
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+        
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-size: 25px;
+            line-height: 2;
+        }
+        
+        .footer-distributed .footer-center p a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Footer Center */
+        
+        .footer-distributed .footer-left {
+            width: 30%;
+            text-align: center;
+        }
+        /* The company logo */
+        
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+        }
+        
+        .footer-distributed h3 span {
+            color: #5383d3;
+        }
+        /* Footer links */
+        
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+        
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .footer-distributed .footer-company-name {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+        /* Footer Derecha */
+        
+        .footer-distributed .footer-right {
+            width: 30%;
+            text-align: center;
+        }
+        
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+        
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+        
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+        
+        .logoFacebook {
+            width: 40%;
+            margin-left: 25%;
+            margin-top: 4%;
+        }
+        
+        .logoGestion {
+            width: 35%;
+        }
+        /**********************Efecto bluir****************/
+        
+        .efectoBluir {
+            filter: blur(12px);
+            transition: all 0.1s ease;
+        }
+        /*****************Media queries************************/
+        
+        @media (max-width: 1297px) {
+            .margen-boton {
+                margin-bottom: 12%;
+            }
+            .margen-contactenos {
+                margin-top: 6%;
+            }
+            .tipografia-titulos-info {
+                font-size: 2.5rem!important;
+            }
+        }
+        
+        @media (max-width: 1000px) {
+            .marginContact {
+                margin-top: 10%;
+                margin-bottom: 5%;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            .margen-slider {
+                margin-top: 70px;
+            }
+            .tipo-tamanio {
+                margin-left: -2%!important;
+            }
+            .tipografia-titulos-slider {
+                font-size: 250%;
+                top: 50%;
+            }
+            .logo-header {
+                width: 30%;
+            }
+            .footer-distributed .footer-center p {
+                display: block;
+            }
+            .letras:hover::after {
+                display: none;
+            }
+            .margen-contactenos {
+                margin-top: 8%;
+            }
+            .rayas-form:before {
+                top: 5.6%;
+                left: 6.5%;
+            }
+            .rayas-form:after {
+                bottom: 5.6%;
+                right: 6.5%;
+            }
+            .footer-distributed {
+                font: bold 14px sans-serif;
+            }
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+            .logoFacebook {
+                width: 100px;
+                margin-left: 0%;
+                margin-top: 10%;
+            }
+            .logoGestion {
+                width: 100px;
+                margin-top: 7%;
+            }
+            .vl {
+                border-bottom: 3px solid #52AA00;
+                position: relative;
+                display: block;
+                width: 300px;
+                margin: auto;
+                height: 0;
+            }
+        }
+        
+        @media (max-width: 890px) {
+            p {
+                font-size: 14px;
+            }
+            .margenesTexto {
+                margin-bottom: 11%;
+            }
+            .margen-contactenos {
+                margin-top: 9%;
+            }
+        }
+        
+        @media (max-width: 840px) {
+            .header-info {
+                margin-top: 50px;
+            }
+            .margen-contactenos {
+                margin-top: 9%;
+            }
+            .margenesCuadro {
+                margin-top: 30px;
+            }
+            .margenesTexto {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .caja-mensaje {
+                height: 350px;
+            }
+            .img-pies {
+                width: 40%;
+            }
+            .tipografia-titulos-slider {
+                font-size: 220%;
+            }
+            .mision-desktop {
+                display: none;
+            }
+            .mision-movil {
+                display: block;
+            }
+            .caja-texto-info {
+                margin-bottom: 0px;
+            }
+            .caja-texto-info-2 {
+                margin-top: 0px;
+            }
+            .esconderImagen {
+                display: none;
+            }
+            .tipografia-titulos-info {
+                font-size: 320%;
+            }
+            .images {
+                width: 95%;
+            }
+            .logo-header {
+                width: 45%;
+            }
+        }
+        
+        @media (max-width: 570px) {
+            .tipografia-titulos-slider {
+                font-size: 150%;
+                align-content: center;
+            }
+            .margen-contactenos {
+                margin-top: 14%;
+            }
+            .jumbotron {
+                padding: 4rem 2rem;
+            }
+            .caja-texto-info {
+                padding: 8%;
+            }
+            .tipografia-texto-cajas {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .logoFacebook {
+                width: 200px;
+            }
+            .logoGestion {
+                width: 200px;
+            }
+            .tipografia-texto-cajas {
+                font-size: 14px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+            .tipografia-titulos-cajas {
+                font-size: 10px;
+                margin-top: 2px;
+                margin-bottom: 20px;
+            }
+            .letras {
+                font-size: 1rem;
+            }
+            .margen-contactenos {
+                margin-top: 12%;
+            }
+            .img-responsive {
+                width: 55%;
+            }
+            .clase {
+                margin-top: 3%;
+            }
+            .margenesTexto {
+                margin-bottom: 10%;
+            }
+            .rayas-form:before {
+                left: 7%;
+            }
+            .rayas-form:after {
+                right: 7%;
+            }
+            .cajaTexto1-contactenos {
+                height: 550px;
+            }
+            .cajaTexto2-contactenos-formulario {
+                height: 650px;
+            }
+            .caja-info {
+                width: 200px;
+                margin-bottom: 20px;
+            }
+            .logo-header {
+                width: 50%;
+            }
+            h1 {
+                font-size: 1.5rem!important;
+            }
+            h3 {
+                font-size: 1.5rem!important;
+            }
+            h5 {
+                font-size: 1rem!important;
+            }
+            h4 {
+                font-size: 1rem!important;
+            }
+            a {
+                font-size: 1rem!important;
+            }
+            span {
+                font-size: 1.2rem!important;
+            }
+            .tel,
+            .arroba {
+                width: 35px;
+            }
+            .fa {
+                font-size: 1.5rem!important;
+            }
+            .logoFacebook {
+                width: 50px;
+            }
+            .logoGestion {
+                width: 70px;
+            }
+        }
+        
+        @media (max-width: 393px) {
+            .tipografia-titulos-info {
+                font-size: 2rem!important;
+            }
+            .margenesTexto {
+                font-size: 14px!important;
+            }
+            .logo-header {
+                width: 55%;
+            }
+            .vl {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 20px!important;
+            }
+            h3 {
+                font-size: 16px!important;
+            }
+            h5 {
+                font-size: 14px!important;
+            }
+            .tipografia-titulos-cajas {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            .tipografia-texto-cajas {
+                font-size: 12px;
+                margin-bottom: 2px;
+            }
+            .tipografia-titulos-info {
+                font-size: 18px!important;
+            }
+            .tipografia-titulos-formulario {
+                font-size: 16px;
+            }
+            .margenes-cajas {
+                margin: 10% 10% 10% 10%;
+            }
+            .tel {
+                width: 30px;
+            }
+            .arroba {
+                width: 30px;
+            }
+            .logo-header {
+                width: 60%;
+            }
+            .cajaTexto2-contactenos-formulario {
+                height: 650px;
+            }
+            .cajaTexto1-contactenos {
+                height: 600px;
+            }
+            .margenesTexto {
+                font-size: 10px;
+            }
+            .margen-contactenos {
+                margin-top: 22%;
+                font-size: 40px;
+            }
+            .caja-header {
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+            .rayas-form:before {
+                left: 7.9%;
+            }
+            .rayas-form:after {
+                right: 7.9%;
+            }
+            .vl {
+                width: 150px;
+            }
+            .tipo-tamanio {
+                font-size: 16px!important
+            }
+            .text-white {
+                font-size: 18px!important
+            }
+            span {
+                font-size: 20px!important
+            }
+            .caja-mensaje {
+                height: 250px;
+            }
+        }
