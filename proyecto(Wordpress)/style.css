@@ -1,0 +1,554 @@
+/*!
+Theme Name Pockets
+Template Theme URI: http://www.srp.ucr.ac.cr/
+Author: Valeria Vasquez Fernando Castillo TM7200 - III 2019
+Author URI: http://www.srp.ucr.ac.cr/
+Description: Tema del curso de Desarrollo Rapido de Aplicaciones
+Version: 1.0
+License: GNU General Public License v2
+*/
+
+@font-face {
+    font-family: "Vesetia";
+    src: url(../proyecto/assets/font/holi.otf);
+}
+
+@font-face {
+    font-family: "Holiday";
+    src: url(../proyecto/assets/font/HolidayFree.otf);
+}
+
+h1 {
+    font-family: "Vesetia";
+    color: #009FEF;
+}
+
+h2 {
+    font-family: "Vesetia";
+    color: #FF85DD;
+    padding-bottom: 10%;
+}
+
+h3 {
+    font-family: "Vesetia";
+    color: #FFD4F7;
+    font-size: 20px;
+}
+
+nav {
+    background-color: #00102E;
+    font-family: "Vesetia";
+}
+
+.row {
+    width: 100%;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.textos {
+    color: #FFD4F7;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 60px;
+    padding-left: 60px;
+    text-align: justify;
+    padding-bottom: 100px;
+}
+
+p {
+    color: #FFD4F7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gettouch {
+    width: 100%;
+}
+
+.margin-gett {
+    padding: 40px;
+}
+
+.margintextgett {
+    margin-bottom: 40px;
+}
+
+.navbar-dark {
+    color: #FF85DD;
+}
+
+a {
+    font-family: "Vesetia";
+    color: #FF85DD;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+select {
+    background-color: #00102E;
+    font-family: 'Vesetia';
+    font-size: 20px;
+    color: #FF85DD;
+    margin: 20%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #FF85DD
+}
+
+
+.background-reservation {
+    background-image: url(../proyecto/assets/img/ab3.png);
+    max-width: 100%;
+    padding: 60px;
+    background-attachment: fixed;
+}
+
+
+a:hover {
+    color: #009FEF;
+}
+
+.navbar-nav {
+    color: #FF85DD;
+}
+
+.linkover {
+    color: #009FEF;
+}
+
+.background-header {
+    background-image: url(../proyecto/assets/img/about.png);
+    padding-right: 0;
+    width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.background_cocktail {
+    background-image: url(../proyecto/assets/img/fondo_cocktails1.png);
+    padding-right: 0;
+    width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.background_cocktail2 {
+    background-image: url(../proyecto/assets/img/fondo_cocktails2.png);
+    padding-right: 0;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-attachment: fixed;
+}
+
+.background-contact {
+    background-image: url(../proyecto/assets/img/ab3.png);
+    max-width: 100%;
+    padding: 60px;
+    padding-left: 160px;
+    background-attachment: fixed;
+}
+
+.background-location {
+    background-image: url(../proyecto/assets/img/fondo-loc.png);
+    max-width: 100%;
+    padding: 60px;
+    padding-left: 160px;
+    background-attachment: fixed;
+}
+
+.logo-header {
+    width: 120px;
+    margin-right: 70px;
+}
+
+.attachment-loguito {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.page_intro {
+    width: 40%;
+}
+
+.fondoazul {
+    background: #00102E;
+	padding-top:5%;
+}
+
+.button {
+    color: #00102E;
+    background: #009FEF;
+    font-family: "Holiday";
+}
+
+.fitem {
+    width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+input {
+    background: #00102E;
+    border: #FFD4F7;
+}
+
+.paddingtoprow {
+    padding-top: 40px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+.nopadding {
+    padding-bottom: 0%;
+}
+
+.map {
+    width: 100%;
+    padding: -10%;
+    height: 40%;
+}
+
+
+/******Página 404***********/
+
+.background-404 {
+    background-image: url(../proyecto/assets/img/404_img.png);
+    padding-right: 0;
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.a_404 {
+    font-family: "Vesetia";
+    color: #FF85DD;
+    font-size: 40px;
+}
+
+.text_404 {
+    font-size: 4rem;
+}
+
+.img_404_dimenciones {
+    position: relative;
+    width: 70%
+}
+
+
+/*********************/
+
+.txt_bebidas {
+    padding: 8% 0% 2% 0%;
+}
+
+.button_contact {
+    padding: 3.5%;
+    font-size: 2rem;
+    border-radius: 142px 142px 142px 142px;
+    -moz-border-radius: 142px 142px 142px 142px;
+    -webkit-border-radius: 142px 142px 142px 142px;
+    font-family: 'Vesetia';
+    color: white;
+    margin-top: 50px;
+}
+
+.foot_imagen:hover {
+    filter: grayscale(40%);
+    transform: scale(1.2);
+}
+
+.blueback {
+    width: 100%;
+}
+
+.button_contact:hover {
+    filter: grayscale(40%);
+    transform: scale(1.2);
+}
+
+.center_elements {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.center_img {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.title_distance {
+    padding: 0% 0% 5% 0%;
+}
+
+.title_distance_contact {
+    padding: 5% 0% 5% 0%;
+}
+
+.section_link {
+    font-size: 1rem;
+    font-family: "Vesetia";
+    padding: 2.5% 0% 0% 0%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.global_container {
+    margin: 0 auto;
+    font-size: 300px;
+}
+
+.background-header-home {
+    background-image: url(../proyecto/assets/img/fondo_home1.png);
+    padding-right: 0;
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.paddingtext {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.background-ubi {
+    background-image: url(../proyecto/assets/img/fondo-loc2.png);
+    padding-right: 0;
+    max-width: 100%;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.background-drinks {
+    background-image: url(../proyecto/assets/img/fondo_home2.png);
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+    margin-bottom: -30px;
+}
+
+.background-res {
+    background-image: url(../proyecto/assets/img/fondo_home3.png);
+    padding-right: 0;
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.background-enter {
+    background-image: url(../proyecto/assets/img/fondo_home4.png);
+    padding-right: 0;
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.background-disco {
+    background-image: url(../proyecto/assets/img/fondo_home5.png);
+    padding-right: 0;
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+}
+
+.background-acti {
+    background-image: url(../proyecto/assets/img/fondo_home6.png);
+    padding-right: 0;
+    max-width: 100%;
+    padding: 10%;
+    background-attachment: fixed;
+    margin-bottom: -60px;
+}
+
+.attachment-banner_img {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.attachment-res_imgs {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.letraspink {
+    color: #FF00CB;
+}
+
+.enter_img {
+    width: 100%;
+}
+
+.col-xs-6 {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*******About********/
+
+.background-ab1 {
+    background-image: url(../proyecto/assets/img/ab1.png);
+    padding-right: 0;
+    max-width: 100%;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.background-ab2 {
+    background-image: url(../proyecto/assets/img/ab3.png);
+    padding-right: 0;
+    max-width: 100%;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+
+/*******************/
+
+@media (max-width: 890px) {
+    .paddingtoprow {
+        padding-top: 10px;
+    }
+    .background-contact {
+        padding: 10px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    .margin-gett {
+        padding: 20px;
+    }
+    h2 {
+        padding-bottom: 3%;
+        padding-top: 3%;
+    }
+    .margintextgett {
+        margin-bottom: 20px;
+    }
+    .textos {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+    .button {
+        margin-bottom: 50px;
+        font-size: 14px;
+    }
+    li {
+        padding: 0px;
+        margin: 0%;
+    }
+    .gettouch {
+        width: 20px;
+    }
+    .fitem {
+        width: 30px;
+    }
+    .logo-header {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .gettouch {
+        width: 30px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+    a {
+        margin-left: 10px;
+    }
+    .textos {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .attachment-loguito {
+        width: auto;
+        height: auto;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .attachment-res_imgs {
+        width: 70%;
+    }
+    .background_cocktail2 {
+        height: auto;
+    }
+    .txt_bebidas {
+        padding: 8% 0% 2% 0%;
+    }
+    .fix_distribution {
+        float: right;
+    }
+    .parr_404 {
+        padding: 10% 0% 2% 0%;
+    }
+}
+
+@media (max-width: 450px) {
+    .textos {
+        font-size: 1rem
+    }
+    .x_img {
+        width: 40%;
+    }
+    .txt_bebidas {
+        padding: 8% 0% 2% 0%;
+    }
+}
+
+/********Cambios del menu*********/
+
+.background-menu {
+    background-image: url(../proyecto/assets/img/fondo_menu1.png);
+    max-width: 100%;
+    background-attachment: fixed;
+}
+
+.background-menu2 {
+    background-image: url(../proyecto/assets/img/fondo_menu2.png);
+    max-width: 100%;
+    background-attachment: fixed;
+}
+
+@media (max-width: 500px){
+    .logo_menu{
+        margin-left: -50%;
+    }
+}
+
+.alignnone{
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.boton{
+    margin-left: 70%;
+}
+
+.elementsmenu{
+	align-content: center;
+}
