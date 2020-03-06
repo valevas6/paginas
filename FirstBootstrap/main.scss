@@ -1,0 +1,175 @@
+@import 'media-queries';
+@import 'fonts';
+
+@include font-face('catamaranBold', 'catamaran-bold', 'catamaran', 'serif');
+@include font-face('latoRegular', 'lato-regular', 'lato', 'serif');
+
+@include respond-to($phone) {
+	}
+
+footer{
+		background: #000;
+		color:#fff;
+		text-align: center;
+		font-family: latoRegular;
+		font-size: 15px;
+		padding:20px;
+		margin-top: 20px;
+		@include respond-to($phone) {
+			font-size: 10px;
+			padding:15px;
+		}
+}
+
+
+h1, h2, h3{
+font-family: catamaranBold;
+}
+
+h1{
+font-size:80px;
+	@include respond-to($phone) {
+		font-size:25px;
+	}
+}
+
+h2{
+font-size:50px;
+	@include respond-to($phone) {
+		font-size:20px;
+	}
+}
+
+h3{
+font-size:40px;
+margin-top: 100px;
+
+@include respond-to($phone) {
+	font-size:18px;
+	margin-left:10px;
+	margin-top: 25px;
+	}
+}
+
+p{
+font-family: latoRegular;
+font-size: 18px;
+margin-left:60px;
+margin-right:60px;
+
+@include respond-to($phone) {
+	font-size: 10px;
+	margin-left:20px;
+	margin-right:10px;
+	}
+}
+
+
+.header{
+		background: #000;
+		text-align: center;
+		color:#fff;
+		height: 40px;
+		opacity:0.7;
+		@include respond-to($phone) {
+			height: 32px;
+		}
+	}
+
+nav{
+
+display:inline-block;
+width: 100%;
+font-family: catamaranBold;
+font-size: 12px;
+
+		@include respond-to($phone) {
+			font-size: 10px;
+		}
+
+	#logo{
+		display: block;
+		margin:10px;
+		text-decoration: none;
+		color: #fff;
+		float: left;
+	}	
+
+	ul{
+		float: right;
+
+		li{
+			display: inline-block;
+			padding: 10px;
+			cursor:pointer;
+			transition: all .5s;
+
+			&:hover{
+				color:#ee0979;
+			}
+		}
+	}
+}
+
+
+.row{	
+	text-align: center;
+}
+
+.heaIMG{
+	width:100%;
+}
+
+.heimg{
+	max-width: 50% !important;
+	margin-top: 20px;
+
+	@include respond-to($phone) {
+		max-width: 80% !important;
+		margin-top: 20px;
+	}
+}
+
+.imgBorder{
+	margin:10px;
+}
+
+.textoimg{
+	position:absolute;
+	top: 35%;
+	left: 30%;
+	color:#fff;	
+	@include respond-to($phone) {
+		top: 20%;
+		left: 30%;
+	}	
+}
+
+.textoimg1{
+	position:absolute;
+	top: 52%;
+	left: 33%;
+	color:#fff;
+	@include respond-to($phone) {
+		top: 30%;
+		left: 27.5%;
+	}
+}
+
+.textobutton{
+	position:absolute;
+	top: 70%;
+	color:#fff;
+	left: 47%;
+	background-color:#ee0979;	
+	font-family: catamaranBold;
+	font-size: 15px;
+	padding: 15px;
+	border-radius: 50%;
+	@include respond-to($phone) {
+		font-size: 6px;
+		top: 40%;
+		left: 45%;
+		padding: 10px;
+	}
+}
